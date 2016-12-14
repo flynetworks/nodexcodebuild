@@ -22,9 +22,12 @@ var WorkspaceBuild = (function (_super) {
     });
     WorkspaceBuild.prototype.build = function (config) {
         return _super.prototype.build.call(this, Object.assign({}, config, {
-            workspace: this.config.workspace,
-            scheme: this.config.scheme
+            workspace: this.escapeString(this.config.workspace),
+            scheme: this.escapeString(this.config.scheme)
         }));
+    };
+    WorkspaceBuild.prototype.escapeString = function (str) {
+        return str.split(' ').join('\\ ');
     };
     WorkspaceBuild.prototype.validate = function () {
         return Promise.all([

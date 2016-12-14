@@ -16,9 +16,13 @@ export class WorkspaceBuild extends XCodeBuild {
 
     protected build(config: IXCodeBuildCliOptions): Promise<void> {
         return super.build(Object.assign({}, config, {
-            workspace: this.config.workspace,
-            scheme: this.config.scheme
+            workspace: this.escapeString(this.config.workspace),
+            scheme: this.escapeString(this.config.scheme)
         }));
+    }
+
+    private escapeString(str: string) : string {
+        return str.split(' ').join('\\ ');
     }
 
     protected validate(): Promise<IValidationResult[]> {
