@@ -1,6 +1,6 @@
 {
   "name": "nodexcodebuild",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A programmatic interface to xcodebuild developed by Apple",
   "main": "dist/index.js",
   "types": "./src/index.ts",
