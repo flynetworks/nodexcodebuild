@@ -1,0 +1,30 @@
+{
+  "name": "nodexcodebuild",
+  "version": "0.0.0",
+  "description": "A programmatic interface to xcodebuild developed by Apple",
+  "main": "dist/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build:dist": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flynetworks/nodexcodebuild.git"
+  },
+  "keywords": [
+    "xcode",
+    "ipa",
+    "build",
+    "xcodebuild"
+  ],
+  "author": "Kay Schecker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flynetworks/nodexcodebuild/issues"
+  },
+  "homepage": "https://github.com/flynetworks/nodexcodebuild#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.52",
+    "typescript": "^2.1.4"
+  }
+}
